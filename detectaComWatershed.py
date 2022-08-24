@@ -9,7 +9,7 @@ import time
 # endereço da camera do celular através do app 'IP Webcam'
 urlCamCel = 'http://192.168.15.2:8080/video'
 # caminho da camera usb
-urlCamUsb = "/dev/video5"
+urlCamUsb = "/dev/video4"
 
 # pega a deep neural network do yolo
 #net = cv2.dnn.readNet('yolov3_training_last.weights', 'yolov3_testing.cfg')
