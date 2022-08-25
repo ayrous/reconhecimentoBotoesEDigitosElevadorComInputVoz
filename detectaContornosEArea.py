@@ -2,6 +2,7 @@ import cv2
 from cv2 import circle
 import numpy as np
 import time
+import getVoice
 
 # lista das cameras disponiveis no sistema
 #all_camera_idx_avaiable = []
@@ -34,6 +35,11 @@ cap = cv2.VideoCapture(urlCamUsb)
 # se o vídeo nao estiver aberto
 if not (cap.isOpened):
     print("Nao pude abrir a cameraa!")
+
+# pega o andar
+getVoice.speak("Olá, para onde quer ir?!")
+frase = getVoice.get_audio()
+num = getVoice.verificaAndar(frase)
 
 #cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 #cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
