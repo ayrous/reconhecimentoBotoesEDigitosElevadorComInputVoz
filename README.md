@@ -1,4 +1,4 @@
-# reconhecimentoBordas
+# reconhecimentoBotoesEDigitosElevadorComInputVoz
 
 
 Primeiramente é necessário rodar o jack-server:
