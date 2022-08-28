@@ -15,7 +15,7 @@ $ python3 getVoice.py
   - Executar text-to-speech para perguntar a pessoa qual andar ela pretende ir
   - Executar speech-to-text ao receber uma entrada de voz
   - Reconhecer as palavras ditas e coloca-las em uma lista
-  - Percorrer esta listas procurando por números de andares, caso contrário pedir novamente que seja dito o andar onde a pessoa deseja seguir
+  - Percorrer a lista procurando por números de andares, caso contrário pedir novamente que seja dito o andar onde a pessoa deseja seguir
  
 - Capturar o vídeo da câmera webcam (também é possível capturar vídeo da câmera do celular através do aplicativo para android IP webcam, que irá fornecer uma url de stream do vídeo) 
 
