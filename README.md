@@ -6,7 +6,7 @@ $ jack_control start
 
 
 Para teste do input de voz apenas:
-python3 getVoice.py
+$ python3 getVoice.py
 
 
 1. Para iniciar os teste em vídeo em tempo real, deve-se rodar o programa malha.py o qual irá:
