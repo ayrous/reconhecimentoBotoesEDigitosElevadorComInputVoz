@@ -9,7 +9,7 @@ import pyaudio
 
 
 def speak(txt):
-    tts = gTTS(text=txt, lang="pt")
+    tts = gTTS(text=txt, lang="pt-PT")
     filmename = "voice.mp3"
     tts.save(filmename)
     playsound.playsound(filmename)
@@ -40,23 +40,24 @@ def get_audio():
 def verificaAndar(tokens):
 
     buscaUm = -1
-    for i in tokens:
-        if i == "oitavo" or i == "oito" or i == "topo" or i == "8":
+    for a in tokens:
+        i = a.lower()
+        if i == "oitavo" or i == "oito" or i == "topo" or i == "8" or i == "8º":
             buscaUm = 8
-        elif i == "sétimo" or i == "setimo" or i == "sete" or i == "7":
+        elif i == "sétimo" or i == "setimo" or i == "sete" or i == "7" or i == "7º":
             buscaUm = 7
-        elif i == "sexto" or i == "seis" or i == "6":
+        elif i == "sexto" or i == "seis" or i == "6" or i == "6º":
             buscaUm = 6
-        elif i == "quinto" or i == "cinco" or i == "5":
+        elif i == "quinto" or i == "cinco" or i == "5" or i == "5º":
             buscaUm = 5
-        elif i == "quatro" or i == "quatro" or i == "4":
+        elif i == "quarto" or i == "quatro" or i == "4" or i == "4º":
             buscaUm = 4
-        elif i == "terceiro" or i == "três" or i == "3":
+        elif i == "terceiro" or i == "três" or i == "3" or i == "terceira" or i == "3º":
             buscaUm = 3
-        elif i == "segundo" or i == "dois" or i == "2":
-            print("entrou no dois")
+        elif i == "segundo" or i == "dois" or i == "2" or i == "segunda" or i == "2º":
+          #  print("entrou no dois")
             buscaUm = 2
-        elif i == "primeiro" or i == "um" or i == "1":
+        elif i == "primeiro" or i == "um" or i == "1" or i == "1º":
             buscaUm = 1
         elif i == "terreo" or i == "zero" or i == "térreo" or i == "piso vermelho" or i == "0":
             buscaUm = 0
@@ -67,7 +68,7 @@ def verificaAndar(tokens):
         buscaUm = verificaAndar(frase)    
     else:
         speak("Beleza, vamos para o " + str(buscaUm))
-        return buscaUm
+        return int(buscaUm)
 
 for mic in sr.Microphone.list_microphone_names():
     print(mic)
