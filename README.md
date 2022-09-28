@@ -5,7 +5,7 @@ Primeiramente é necessário rodar o jack-server:
 $ jack_control start
 
 
-Para teste do input de voz apenas:
+Para teste apenas do input de voz:
 $ python3 getVoice.py
 
 
